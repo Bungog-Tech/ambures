@@ -11,16 +11,16 @@ function App() {
     
     <>
       <Navbar />
-      <div className="container">
+      <div className="container ">
         <Row>
           
-         <Col md={3}> <Patient/></Col>
-         <Col md={6}>
+         <Col md={3} xl={3}> <Patient/></Col>
+         <Col md={6} xl={6}>
             <div className="calendarContainer">
               <Calendar />
             </div>
          </Col>
-         <Col md={3}> <Driver/></Col>
+         <Col md={3} xl={3}> <Driver/></Col>
           
         </Row>
       </div>
