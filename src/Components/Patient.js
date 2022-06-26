@@ -7,6 +7,8 @@ export default function Patient() {
   const [patientList, setPatientList] = useState([]);
   const prodDaily = patientDataDaily;
 
+
+
   useEffect(() => {
     const patientArr = prodDaily.map((patient) => {
       return (

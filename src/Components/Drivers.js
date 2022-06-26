@@ -1,16 +1,61 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
+import { Card } from "react-bootstrap";
 import driverData from "./../mockdata/driverData";
-import DriverCapsule from "./DriverCapsule";
+import ActiveDriverList from "./ActiveDriverList";
+import StandbyDriverList from "./StandbyDriverList";
+import DayoffDriverList from "./DayOffDriverList";
 
 export default function Driver() {
-  const [driverList, setDriverList] = useState([]);
-  const driverDatas  = driverData;
+  const driverDatalist = driverData;
+  const [activeDriverdata, setActiveDriverData] = useState([]);
+  const [standbyDriverData, setStandbyDriverData] = useState([]);
+  const [dayOffDriverData, setDayOffDriverData] = useState([])
 
   useEffect(() => {
-    const driverArr = driverDatas.map((driver) => {
-      return (<DriverCapsule key= {driver.id} driverData={driver}></DriverCapsule>);
+    const activeDriverArr = driverDatalist.map((driver) => {
+      if (driver.status === "On Road") {
+        return <ActiveDriverList key={driver.id} driverProp={driver} />;
+      }
+      return "";
     });
-    setDriverList(driverArr);
-  }, [driverDatas]);
-  return (<div className="driverContainer">{driverList}</div>);
+    const standByDriverArr = driverDatalist.map((driver) => {
+      if (driver.status === "On Standby") {
+        return <StandbyDriverList key={driver.id} driverProp={driver} />;
+      }
+      return "";
+    });
+    const dayOffDriverDataArr = driverDatalist.map((driver) => {
+        if (driver.status === "Day Off") {
+          return <DayoffDriverList key={driver.id} driverProp={driver} />;
+        }
+        return "";
+      });
+    setStandbyDriverData(standByDriverArr);
+    setActiveDriverData(activeDriverArr);
+    setDayOffDriverData(dayOffDriverDataArr)
+  }, [driverDatalist]);
+
+  // if(driver.status === "On Standby"){}
+  // if(driver.status === "On Dayoff"){}
+
+  // <Card.Title>{driverData.name}</Card.Title>
+  // <Card.Text>
+  //   {driverData.from} - {driverData.to}
+  // </Card.Text>
+  return (
+    <>
+      <Card className="my-2">
+        <Card.Header style={{backgroundColor: "#198754",color:"white"}}>On Road</Card.Header>
+        <Card.Body>{activeDriverdata}</Card.Body>
+      </Card>
+      <Card  className="my-2">
+        <Card.Header style={{backgroundColor: "#ffc107",color:"white"}}>On Stand by</Card.Header>
+        <Card.Body>{standbyDriverData}</Card.Body>
+      </Card>
+      <Card  className="my-2">
+        <Card.Header style={{backgroundColor: "#6c757d",color:"white"}}>Day Off</Card.Header>
+        <Card.Body>{dayOffDriverData}</Card.Body>
+      </Card>
+    </>
+  );
 }
