@@ -5,7 +5,7 @@ function navbar() {
     return (
     <Navbar bg="dark" variant="dark">
   
-    <Navbar.Brand href="#home">Ambulance Rescue</Navbar.Brand>
+    <Navbar.Brand href="#home">Ambulance Reservation System</Navbar.Brand>
     <Nav className="ms-auto">
       <Nav.Link href="#">Sign In</Nav.Link>
      
