@@ -14,7 +14,7 @@ function App() {
       <div className="container ">
         <Row>
           
-         <Col md={3} xl={3}> <Card className="p-0"><Patient/></Card></Col>
+         <Col md={3} xl={3}> <Card className="p-2"><Patient/></Card></Col>
          <Col md={6} xl={6}>
             <Card  className="p-2">
               <div className="calendarContainer">

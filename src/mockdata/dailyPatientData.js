@@ -15,7 +15,11 @@ const patientDataDaily = [
       {id:"res14",
         title: "Reservation",
         start: "2022-06-05",
-      }
+      },
+      {id:"res16",
+      title: "Reservation10",
+      start: "2022-06-05",
+    }
       // etc...
   
 ];

@@ -5,14 +5,19 @@ import { Button, ListGroup} from "react-bootstrap";
 
 export default function Patient() {
   const [patientList, setPatientList] = useState([]);
+
   const prodDaily = patientDataDaily;
 
+
+ 
+  
 
 
   useEffect(() => {
     const patientArr = prodDaily.map((patient) => {
+      console.log(patient)
       return (
-    
+          
           <PatientListItem key= {patient.id}  patientData={ patient } />
        
       );

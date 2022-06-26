@@ -9,6 +9,6 @@ export default function Calendar() {
   return <FullCalendar  plugins={[dayGridPlugin]} initialView="dayGridMonth" headerToolbar={{
     left:"prev,next",
     center:"title",
-    right:"dayGridWeek,dayGridMonth"
+    right:"dayGridMonth"
   }} eventSources={PatientData} contentHeight={'auto'}/>;
 }
