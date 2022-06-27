@@ -45,15 +45,15 @@ export default function Driver() {
   return (
     <>
       <Card className="my-2">
-        <Card.Header style={{backgroundColor: "#198754",color:"white"}}>On Road</Card.Header>
+        <Card.Header style={{backgroundColor: "#198754",color:"white",fontWeight: 'bold' }} >On Road</Card.Header>
         <Card.Body>{activeDriverdata}</Card.Body>
       </Card>
       <Card  className="my-2">
-        <Card.Header style={{backgroundColor: "#ffc107",color:"white"}}>On Stand by</Card.Header>
+        <Card.Header style={{backgroundColor: "#FF0066",color:"white",fontWeight: 'bold' }}>On Stand by</Card.Header>
         <Card.Body>{standbyDriverData}</Card.Body>
       </Card>
       <Card  className="my-2">
-        <Card.Header style={{backgroundColor: "#6c757d",color:"white"}}>Day Off</Card.Header>
+        <Card.Header style={{backgroundColor: "#6c757d",color:"white",fontWeight: 'bold' }}>Day Off</Card.Header>
         <Card.Body>{dayOffDriverData}</Card.Body>
       </Card>
     </>
