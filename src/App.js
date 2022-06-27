@@ -14,15 +14,15 @@ function App() {
       <div className="container  mx-auto my-2">
         <Row>
           
-         <Col md={3} xl={3} sm={10}> <Card className="p-2 my-2"><Patient/></Card></Col>
+         <Col md={3} xl={3} sm={10}> <Card className="p-2 my-2"  border="primary"><Patient/></Card></Col>
          <Col md={6} xl={6} sm={10}>
-            <Card  className="p-2">
+            <Card border="primary" className="p-2">
               <div className="calendarContainer my-2">
                 <Calendar />
               </div>
             </Card>
          </Col>
-         <Col md={3} xl={3} sm={10}><Card  className="p-2 my-2"> <Driver/></Card></Col>
+         <Col md={3} xl={3} sm={10}><Card border="primary" className="p-2 my-2"> <Driver/></Card></Col>
           
         </Row>
       </div>
