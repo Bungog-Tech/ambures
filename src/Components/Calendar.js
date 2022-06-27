@@ -5,6 +5,7 @@ import PatientData from '../mockdata/patientData'
 import bootstrap5Plugin from '@fullcalendar/bootstrap5';
 
 
+
 export default function Calendar() {
 
   return <FullCalendar  plugins={[dayGridPlugin, bootstrap5Plugin ]} 
@@ -12,7 +13,7 @@ export default function Calendar() {
   headerToolbar={{
     left:"prev,next",
     center:"title",
-    right:"dayGridMonth",
+    right:"dayGridDay,dayGridWeek,dayGridMonth",
     height:"auto",
   }}
   eventSources={PatientData} 

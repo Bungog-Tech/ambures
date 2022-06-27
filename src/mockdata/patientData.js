@@ -18,11 +18,12 @@
         },
         {
           title: 'Reservation',
-          start: '2022-06-05'
+          start: '2022-06-05',
+          color: '',   // an option!
         }
         // etc...
       ],
-      color: '',   // an option!
+  
       textColor: 'white' // an option!
     }
   ]
