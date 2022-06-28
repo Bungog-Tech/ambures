@@ -1,5 +1,6 @@
 import React from "react";
-import { Button } from "react-bootstrap";
+
+import ActiveDriverPopOverButton from "./ActiveDriverPopOverButton";
 
 
 export default function ActiveDriverList({ driverProp }) {
@@ -7,8 +8,8 @@ export default function ActiveDriverList({ driverProp }) {
 
   return (
     <> 
-     <p><strong>{Datax.name}</strong> <Button variant="outline-secondary" style={{float:"right"}}><i className='fas fa-ellipsis-h'></i></Button></p> 
-     
+     <div><strong>{Datax.name}</strong><ActiveDriverPopOverButton keyData={Datax.id} /></div> 
+      
      <p>{Datax.from}-{Datax.to} </p>
    
     </>

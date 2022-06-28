@@ -6,6 +6,7 @@
 body{
   height: 100%;
   width: 100%;
+  background-color: rgb(245, 245, 245);
 }
 .container{
 
@@ -39,4 +40,20 @@ body{
   display: flex;
   flex-direction: column;
   margin:1rem;
+}
+.bg-off-white{
+  background-color: rgb(255, 255, 255);
+}
+.popover-container {
+  width: max-content;
+}
+.over-buttons{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.over-buttons *{
+  margin-right:1.25em;
+  padding: 0;
 }

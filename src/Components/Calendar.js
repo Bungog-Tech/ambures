@@ -19,7 +19,7 @@ export default function Calendar() {
   }}
   eventSources={PatientData} 
   contentHeight={'auto'}
-  contentWidth={'auto'}
+
   themeSystem={'bootstrap5'}
   dateClick={function dateClick(info){  alert(`${info.date.getFullYear()}-${info.date.getMonth()}-${info.date.getDay()}`);}}
   
